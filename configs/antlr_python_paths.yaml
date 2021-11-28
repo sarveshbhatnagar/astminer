@@ -1,15 +1,15 @@
 # input directory (path to project)
-inputDir: src/test/resources/
+inputDir: src/test/resources/examples/
 # output directory
 outputDir: output
 
 # parse Python files with ANTLR parser
 parser:
   name: antlr
-  languages: [py]
+  languages: [py, js]
 
 filters:
-  - name: by tree size  # exclude the trees that have > 1000 nodes
+  - name: by tree size # exclude the trees that have > 1000 nodes
     maxTreeSize: 1000
 
 # use file names as labels
@@ -21,5 +21,5 @@ label:
 # save paths in code2vec format
 storage:
   name: code2seq
-  maxPathLength: 9
-  maxPathWidth: 2
+  length: 9
+  width: 2
